@@ -1,0 +1,60 @@
+{
+  "user": [
+     {
+    "id": "1",
+    "username": "string",
+    "email": "string",
+    "password": "string"
+  },
+    {
+        "id": "2",
+        "username": "string2",
+        "email": "string2",
+        "password": "string2"
+    }
+    
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "string",
+      "description": "string",
+      "price": 100,
+      "imageUrl": "https://example.com/image1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "string2",
+      "description": "string2",
+      "price": 200,
+      "imageUrl": "https://example.com/image2.jpg"
+    }
+  ],
+  "carts" :[
+    {
+      "id": "1",
+      "userId": "1",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 2
+        },
+        {
+          "productId": "2",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+
+}
