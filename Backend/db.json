@@ -1,18 +1,19 @@
 {
   "user": [
-     {
-    "id": "1",
-    "username": "string",
-    "email": "string",
-    "password": "string"
-  },
     {
-        "id": "2",
-        "username": "string2",
-        "email": "string2",
-        "password": "string2"
+      "id": "mhu-me_4DrhMN6Vul0J5J",
+      "username": "OLYS204644",
+      "email": "patelchetram49@gmail.com",
+      "password": "sdfsdf",
+      "isAdmin": true
+    },
+    {
+      "id": "StsWxlxszDjEGZWRX00Ur",
+      "username": "vishal lodhi",
+      "email": "vishalsinghlodhi16@gmail.com",
+      "password": "123456",
+      "isAdmin": false
     }
-    
   ],
   "product": [
     {
@@ -30,7 +31,7 @@
       "imageUrl": "https://example.com/image2.jpg"
     }
   ],
-  "carts" :[
+  "carts": [
     {
       "id": "1",
       "userId": "1",
@@ -56,5 +57,4 @@
       ]
     }
   ]
-
 }
