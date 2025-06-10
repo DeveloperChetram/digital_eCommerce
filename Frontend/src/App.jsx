@@ -10,13 +10,12 @@ const App = () => {
 
 useEffect(()=>{
     dispatch(asyncCurrentUser())
-},[])
+},[]);
   return (
-    
-    <div className='bg-gray-950 w-screen  text-white p-10'  >
-<Nav/>
+    <div className='bg-[#F5F5DC] w-full min-h-screen flex items-center flex-col'>
+      <Nav/>
       <MainRoutes/> 
-
+      
     </div>
   )
 }

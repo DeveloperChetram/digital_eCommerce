@@ -13,6 +13,27 @@
       "email": "vishalsinghlodhi16@gmail.com",
       "password": "123456",
       "isAdmin": false
+    },
+    {
+      "id": "fauEpOEzPtNKAw-mtThdY",
+      "username": "developer_chetram",
+      "email": "Changuuu49@gmail.com",
+      "password": "changuuu",
+      "isAdmin": false
+    },
+    {
+      "id": "bmKzNLNBt4i1UBYd-SCur",
+      "username": "",
+      "email": "",
+      "password": "",
+      "isAdmin": false
+    },
+    {
+      "id": "oTwl0TsTSdIW_FEHzCdbc",
+      "username": "",
+      "email": "",
+      "password": "",
+      "isAdmin": false
     }
   ],
   "product": [
