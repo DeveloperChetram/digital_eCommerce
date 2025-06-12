@@ -21,7 +21,7 @@ export const asyncLoginUser = (user) => async (dispatch, getState) => {
     const { data } = await axios.get(
       `/user?email=${user.email}&password=${user.password}`
     );
-
+    dispatch(loaduser(data[0]));
     console.log("User logged in successfully:", data[0]);
     localStorage.setItem("user", JSON.stringify(data[0]));
   } catch (err) {
@@ -31,7 +31,7 @@ export const asyncLoginUser = (user) => async (dispatch, getState) => {
 export const asyncLogoutUser = (user) => async (dispatch, getState) => {
   try {
 
-   
+   dispatch(loaduser(null));
     localStorage.removeItem("user");
   } catch (err) {
     console.error(err);

@@ -162,12 +162,16 @@ const CreateProduct = () => {
     </div>
     <input 
       {...register('alertMessage', {
+        required: watch('addAlert') ? "Alert message is required when alert is enabled" : false,
         setValueAs: v => v || ""
       })} 
       type="text" 
       placeholder='Write your alert here like "Only few left | top in sales"'
-      className="border p-2 rounded-lg w-full"
+      className={`border p-2 rounded-lg w-full ${watch('addAlert') && errors.alertMessage ? 'border-red-500' : ''}`}
     />
+    {watch('addAlert') && errors.alertMessage && (
+      <p className="text-red-500 text-sm mt-1">{errors.alertMessage.message}</p>
+    )}
   </div>
 
   {/* Image URL Preview Input */}

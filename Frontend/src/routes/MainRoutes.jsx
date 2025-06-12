@@ -7,6 +7,7 @@ import Regiter from '../pages/Register'
 import CreateProduct from './../pages/admin/CreateProduct';
 import UpdateProduct from './../pages/admin/UpdateProduct';
 import SingleProduct from './../components/SingleProduct';
+import UserProfile from './../pages/user/UserProfile';
 
 const MainRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const MainRoutes = () => {
       <Route path='/admin/create-product' element={<CreateProduct/>} />
       <Route path='/admin/update-product/:id' element={<UpdateProduct/>} />
       <Route path='/product/:id' element={<SingleProduct/>} />
+      <Route path='/user-profile/:id' element={<UserProfile/>}/>
     </Routes>
   )
 }

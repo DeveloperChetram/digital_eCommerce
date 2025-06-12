@@ -24,7 +24,7 @@ const SingleProduct = () => {
  return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl border shadow-md space-y-4 mt-5">
       {/* Top Alerts */}
-      {product?.alertMessage && (
+      {product?.addAlert && (
         <div className="w-full border rounded-full py-2 px-4 text-sm text-center text-pink-600 font-medium flex flex-wrap justify-center gap-4">
           <span>{product.alertMessage}</span>
         </div>

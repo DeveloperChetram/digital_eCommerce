@@ -13,22 +13,43 @@
       "email": "vishalsinghlodhi16@gmail.com",
       "password": "222222",
       "isAdmin": false
+    },
+    {
+      "id": "pWNMI38hv0ZaGXl9B_nx4",
+      "username": "OLYS204644",
+      "email": "aakash@gmail.com",
+      "password": "0000000",
+      "isAdmin": false
     }
   ],
   "products": [
     {
-      "id": "BpoS56VmeBH_39ZfSXSbw",
+      "id": "BpoS56VmeBHj39ZfSXSbw",
       "productName": "Trishonna's Worthy 30 Bundle",
       "owner": "trishonna",
       "date": "2025-02-15",
       "price": 99.99,
       "fileType": "pdf",
-      "fileUrl": "https://course.ccs.neu.edu/cs5500sp17/09-UX.pdf",
+      "fileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yaLf7F2ENyNOdflTGQF0rLovpBifwGsTwg&s",
       "productDescription": "The PDF explains the difference between UX (user satisfaction) and UI (interface design), stressing user-centered, iterative design. It highlights the importance of usability heuristics, prototyping, and user feedback.\n\n1.UX focuses on user needs, tasks, and satisfaction.\n2.UI deals with layout, visuals, and interaction.\n3.Iterative design and prototyping improve usability.\n4.Nielsen’s 10 heuristics guide effective interface design.",
       "visibility": "Public",
       "addAlert": true,
-      "alertMessage": "Limited Time Offer | Upgrade Your UX Skills Now! | Free PDF & Pro Tips | Grab It Before It's Gone!",
+      "alertMessage": " dzdvzdc",
       "imageUrl": "https://public-files.gumroad.com/5myimco7hzjxlf7eeshzjxtrjkk9"
+    },
+    {
+      "id": "3ZzhAkiRnDF_eJ5GuRjkh",
+      "productName": "Nike Air Jordan 1",
+      "owner": "Changuuu",
+      "date": "2025-06-22",
+      "price": 5005,
+      "fileType": "zip",
+      "fileUrl": "https://example.com/files/ui-starter-kit.fig",
+      "productDescription": "These snikers are too good",
+      "visibility": "Private",
+      "addAlert": false,
+      "alertMessage": "Only few Products left | buys now big deal | heavy Discount",
+      "imageUrl": "https://images.unsplash.com/photo-1607522370275-f14206abe5d3"
     }
   ],
   "carts": [
