@@ -3,7 +3,6 @@ import { loaduser } from "../reducers/UserSlice";
 export const asyncCurrentUser = (user) => async (dispatch, getState) => {
   try {
 
-
    const user =  JSON.parse(localStorage.getItem("user"))
    if(user){
        dispatch(loaduser(user))

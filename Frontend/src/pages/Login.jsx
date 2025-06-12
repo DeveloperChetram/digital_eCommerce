@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { asyncLoginUser } from "../store/actions/userActions";
 const Login = () => {
+  const user = useSelector((state) => state.users)
+ const navigate = useNavigate()
   const dispatch = useDispatch();
   const SubmitHandler = (data) => {
     // data.id= nanoid()
@@ -18,7 +20,7 @@ const Login = () => {
         src="../../public/assets/fox-border.png"
         alt=""
       />
-      <h1 className="text-xl font-medium text-center">Create Your Profile</h1>
+      <h1 className="text-xl font-medium text-center">Login to your account</h1>
       <form
         onSubmit={handleSubmit(SubmitHandler)}
         className="flex flex-col justify-center items-center gap-5"
@@ -35,9 +37,10 @@ const Login = () => {
           type="password"
           placeholder="Password"
         />
-        <button
+        <button 
           type="submit"
           className="h-[40px] text-white w-[450px]  bg-[#BF40BF]  py-1 px-5 rounded-lg "
+          onClick={()=>{user?navigate('/products'):""}}
         >         
           Proceed to login
         </button>

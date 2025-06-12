@@ -1,81 +1,64 @@
 {
   "user": [
     {
-      "id": "mhu-me_4DrhMN6Vul0J5J",
-      "username": "OLYS204644",
+      "id": "TsfBpqz2yN4UEV48B9_ut",
+      "username": "developer_chetram",
       "email": "patelchetram49@gmail.com",
-      "password": "sdfsdf",
+      "password": "chetna",
       "isAdmin": true
     },
     {
-      "id": "StsWxlxszDjEGZWRX00Ur",
-      "username": "vishal lodhi",
+      "id": "-DMKehbdYE0Soz7qOALh3",
+      "username": "royal_roshnii",
       "email": "vishalsinghlodhi16@gmail.com",
-      "password": "123456",
-      "isAdmin": false
-    },
-    {
-      "id": "fauEpOEzPtNKAw-mtThdY",
-      "username": "developer_chetram",
-      "email": "Changuuu49@gmail.com",
-      "password": "changuuu",
-      "isAdmin": false
-    },
-    {
-      "id": "bmKzNLNBt4i1UBYd-SCur",
-      "username": "",
-      "email": "",
-      "password": "",
-      "isAdmin": false
-    },
-    {
-      "id": "oTwl0TsTSdIW_FEHzCdbc",
-      "username": "",
-      "email": "",
-      "password": "",
+      "password": "222222",
       "isAdmin": false
     }
   ],
-  "product": [
+  "products": [
     {
-      "id": "1",
-      "name": "string",
-      "description": "string",
-      "price": 100,
-      "imageUrl": "https://example.com/image1.jpg"
-    },
-    {
-      "id": "2",
-      "name": "string2",
-      "description": "string2",
-      "price": 200,
-      "imageUrl": "https://example.com/image2.jpg"
+      "id": "BpoS56VmeBH_39ZfSXSbw",
+      "productName": "Trishonna's Worthy 30 Bundle",
+      "owner": "trishonna",
+      "date": "2025-02-15",
+      "price": 99.99,
+      "fileType": "pdf",
+      "fileUrl": "https://course.ccs.neu.edu/cs5500sp17/09-UX.pdf",
+      "productDescription": "The PDF explains the difference between UX (user satisfaction) and UI (interface design), stressing user-centered, iterative design. It highlights the importance of usability heuristics, prototyping, and user feedback.\n\n1.UX focuses on user needs, tasks, and satisfaction.\n2.UI deals with layout, visuals, and interaction.\n3.Iterative design and prototyping improve usability.\n4.Nielsen’s 10 heuristics guide effective interface design.",
+      "visibility": "Public",
+      "addAlert": true,
+      "alertMessage": "Limited Time Offer | Upgrade Your UX Skills Now! | Free PDF & Pro Tips | Grab It Before It's Gone!",
+      "imageUrl": "https://public-files.gumroad.com/5myimco7hzjxlf7eeshzjxtrjkk9"
     }
   ],
   "carts": [
     {
       "id": "1",
-      "userId": "1",
-      "items": [
-        {
-          "productId": "1",
-          "quantity": 2
-        },
-        {
-          "productId": "2",
-          "quantity": 1
-        }
-      ]
+      "productId": "1",
+      "userId": "mhu-me_4DrhMN6Vul0J5J",
+      "quantity": 2,
+      "productName": "Nike Air Max",
+      "productDescription": "Classic running shoes with Air cushioning",
+      "price": 129.99,
+      "size": "US 10",
+      "color": "Black/White",
+      "brand": "Nike",
+      "category": "Footwear",
+      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
     },
     {
       "id": "2",
-      "userId": "2",
-      "items": [
-        {
-          "productId": "1",
-          "quantity": 1
-        }
-      ]
+      "productId": "2",
+      "userId": "StsWxlxszDjEGZWRX00Ur",
+      "quantity": 1,
+      "productName": "Adidas Ultraboost",
+      "productDescription": "High-performance running shoes with Boost technology",
+      "price": 179.99,
+      "size": "US 9",
+      "color": "Grey/Red",
+      "brand": "Adidas",
+      "category": "Footwear",
+      "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
     }
   ]
 }

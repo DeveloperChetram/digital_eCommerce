@@ -3,6 +3,8 @@ import {  useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Nav from './components/Nav';
 import { asyncCurrentUser } from './store/actions/userActions';
+
+import { asyncLoadProducts } from './store/actions/productActions';
 const App = () => {
  const dispatch = useDispatch()
 //  const data = useSelector((state) => state);
@@ -10,6 +12,7 @@ const App = () => {
 
 useEffect(()=>{
     dispatch(asyncCurrentUser())
+    dispatch(asyncLoadProducts())
 },[]);
   return (
     <div className='bg-[#F5F5DC] w-full min-h-screen flex items-center flex-col'>
