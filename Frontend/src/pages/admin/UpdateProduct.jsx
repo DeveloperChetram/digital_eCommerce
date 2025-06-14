@@ -197,7 +197,7 @@ const UpdateProduct = () => {
     type="submit" 
     className="bg-[#BF40BF] text-white py-2 px-5 rounded-lg w-full"
   >
-    Create Product
+    Update Product
   </button>
 </form>
 

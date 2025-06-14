@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom"
 import { asyncDeleteProduct } from "../store/actions/productActions";
+import { asyncUpdateUser } from "../store/actions/userActions";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -10,6 +11,27 @@ const SingleProduct = () => {
     const {id}=useParams()
     const product = products.find((e)=>e.id === id)
   // console.log(id)
+    const addToCartHandler = (id) => {
+    const copyUser = { ...users, cart: [...users.cart]} 
+    // deep copy shalow copy
+    const x = copyUser.cart.findIndex((c) => c.productId == id)
+
+    if (x == -1) {
+      copyUser.cart.push({
+        productId:id,
+        quantity: 1 
+      })
+    }
+    else {
+      copyUser.cart[x]={
+        productId:id,
+        quantity:copyUser.cart[x].quantity +1
+      }
+      console.log(copyUser)
+    }
+
+    dispatch(asyncUpdateUser(copyUser, copyUser.id))
+  }
   const DeleteHandler = ()=> {
     dispatch(asyncDeleteProduct(id))
     navigate("/products")
@@ -61,14 +83,21 @@ const SingleProduct = () => {
             })}</strong>
           </p>
 
-          <p className="text-gray-700 mb-6">{product.productDescription}</p>
-
+          <p className="text-gray-700 mb-6">{product.productDescription.split('\n').map((line, index) => (
+              <span key={index}>
+              {line}
+                <br/>
+            </span>
+          ))}</p>
+            
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex gap-2">
               <button className="bg-[#BF40BF] text-white px-6 py-2 rounded-lg text-sm font-medium">
                 Buy Now
               </button>
-              <button className="border border-[#BF40BF] text-[#BF40BF] px-6 py-2 rounded-lg text-sm font-medium">
+              <button 
+              onClick={()=>addToCartHandler(product.id)}
+              className="border border-[#BF40BF] text-[#BF40BF] px-6 py-2 rounded-lg text-sm font-medium">
                 Add to Cart
               </button>
               {users && users.isAdmin && (

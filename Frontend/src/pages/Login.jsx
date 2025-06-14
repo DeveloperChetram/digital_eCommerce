@@ -5,26 +5,18 @@ import { asyncLoginUser } from "../store/actions/userActions";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 const Login = () => {
-  const user = useSelector((state) => state.users)
- const navigate = useNavigate()
- const dispatch = useDispatch();
- const isLogin= !!user?.data?.id
-    useEffect(() => {
+  const user = useSelector((state) => state.users);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLogin = !!user?.data?.id;
+  useEffect(() => {
     if (isLogin) {
       navigate("/products");
-      toast.success("User loged in")
     }
-  },[isLogin])
+  }, [isLogin]);
   const SubmitHandler = (data) => {
-   
-
-
-    
-     reset();
+    reset();
     dispatch(asyncLoginUser(data));
-  
-    
-   
   };
   const { register, reset, handleSubmit } = useForm();
   return (
@@ -40,22 +32,21 @@ const Login = () => {
         className="flex flex-col justify-center items-center gap-5"
       >
         <input
-          {...register("email",{ required: "email required" })}
+          {...register("email", { required: "email required" })}
           className="h-[40px] w-[450px] border-1 p-2 rounded-lg outline-none"
           type="email"
           placeholder="Email"
         />
         <input
-          {...register("password",{ required: "password is required" })}
+          {...register("password", { required: "password is required" })}
           className="h-[40px] w-[450px]  border-1 p-2 rounded-lg outline-none "
           type="password"
           placeholder="Password"
         />
-        <button 
+        <button
           type="submit"
           className="h-[40px] text-white w-[450px]  bg-[#BF40BF]  py-1 px-5 rounded-lg "
-       
-        >         
+        >
           Proceed to login
         </button>
         <Link to="/register">

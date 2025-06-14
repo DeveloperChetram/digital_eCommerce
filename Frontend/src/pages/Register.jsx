@@ -30,6 +30,7 @@ const Register = () => {
 
   const SubmitHandler = (data) => {
     data.id= nanoid()
+    data.cart=[]
     data.isAdmin = data.isAdmin || false;
     // console.log(data);
     reset()

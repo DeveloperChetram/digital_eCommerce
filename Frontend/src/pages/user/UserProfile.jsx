@@ -3,16 +3,20 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaUserEdit } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {asyncDeleteUser, asyncUpdateUser} from "../../store/actions/userActions.jsx";
+import {useNavigate, useParams} from "react-router-dom";
+
 
 const UserProfile = () => {
 const user = useSelector((state) => state.users.data)
-  const { register,reset } = useForm({
-
-  });
-if(user){
+  const { register,handleSubmit,reset } = useForm({});
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const { id } = useParams()
     useEffect(()=>{
-    reset({
+if(user){
+      reset({
 
       username: user?.username,
       email: user?.email,
@@ -20,18 +24,31 @@ if(user){
       sellerCategory: "Currently Unavailable",
     },
     )
-  },[user,reset])
 }
-  console.log(user)
+  },[user,reset])
+
+  // console.log(user)
   const [isEditable, setisEditable] = useState(true);
-  const editHandler = () => {
+  const editHandler = (data) => {
     setisEditable(!isEditable);
+    updateHandler(data)
     console.log(isEditable);
+
   };
+
+    const updateHandler = (updateduser) => {
+
+      !isEditable ? dispatch(asyncUpdateUser(updateduser,id)) : null
+
+  }
+  const daleteHandler = ()=>{
+    dispatch(asyncDeleteUser(id))
+    navigate("/login")
+  }
   return (
-    <div className="max-w-4xl mx-auto  p-6 text-center mt-10 border rounded-2xl border-[#bf40bf]">
+    <div className="max-w-8xl w-1/2  mx-auto  p-6 text-center mt-10 border rounded-2xl border-[#bf40bf]">
       <div className="w-full relative">
-      {user.isAdmin?<>  <h2 className="text-m font-bold text-gray-600 mb-8">
+      {user?.isAdmin?<>  <h2 className="text-m font-bold text-gray-600 mb-8">
           User type - Seller (Admin)
         </h2></>:<>
          <h2 className="text-m font-bold text-gray-600 mb-8">
@@ -43,7 +60,7 @@ if(user){
               ? "select-none absolute top-0 right-0 flex items-center gap-2 border-1 rounded-lg border-[#BF40BF] px-4 py-1 cursor-pointer"
               : "select-none absolute top-0 right-0 flex items-center gap-2 border-1 rounded-lg border-[#BF40BF] px-4 py-1 cursor-pointer bg-[#bf40bf] text-white"
           }
-          onClick={editHandler}
+          onClick={handleSubmit(editHandler)}
         >
           {isEditable ? (
             <>
@@ -58,8 +75,8 @@ if(user){
           )}{" "}
         </span>
       </div>
-      <div className="flex flex-col justify-center items-center gap-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+      <div className="flex flex-col w-full justify-center items-center gap-6">
+        <div className="grid w-[90%]  grid-cols-1 md:grid-cols-2 gap-6 text-left">
           {/* User Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -120,7 +137,9 @@ if(user){
             />
           </div>
         </div>
-        <button className=  "cursor-pointer border-red-500  border-2  px-6 py-2 rounded-lg text-sm font-medium">
+        <button
+            onClick={daleteHandler}
+            className=  "cursor-pointer border-red-500  border-2  px-6 py-2 rounded-lg text-sm font-medium">
           Delete
         </button>
       </div>

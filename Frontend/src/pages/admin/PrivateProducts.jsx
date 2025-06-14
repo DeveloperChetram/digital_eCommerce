@@ -42,7 +42,7 @@ import { useNavigate } from "react-router-dom";
     return (
     <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
 
-    {RenderedPrivateProducts.length > 0 ? RenderedPrivateProducts : <div className="col-span-full flex justify-center items-center">
+    {RenderedPrivateProducts?.length > 0 ? RenderedPrivateProducts : <div className="col-span-full flex justify-center items-center">
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-center" role="alert">
               <strong className="font-bold">No Private Products Found! </strong>
               <span className="block sm:inline">Please make some products' visibility private to view them here.</span>

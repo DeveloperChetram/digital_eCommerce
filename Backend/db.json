@@ -1,25 +1,29 @@
 {
   "user": [
     {
-      "id": "TsfBpqz2yN4UEV48B9_ut",
+      "id": "7KljgBeoTT-DvbmaNWg_b",
       "username": "developer_chetram",
       "email": "patelchetram49@gmail.com",
       "password": "chetna",
-      "isAdmin": true
+      "isAdmin": true,
+      "cart": [
+        {
+          "productId": "BpoS56VmeBHj39ZfSXSbw",
+          "quantity": 2
+        },
+        {
+          "productId": "3ZzhAkiRnDF_eJ5GuRjkh",
+          "quantity": 1
+        }
+      ]
     },
     {
-      "id": "-DMKehbdYE0Soz7qOALh3",
-      "username": "royal_roshnii",
+      "id": "rTvb5AXdDYS7xWCPsBr4y",
+      "username": "OLYS204644",
       "email": "vishalsinghlodhi16@gmail.com",
       "password": "222222",
-      "isAdmin": false
-    },
-    {
-      "id": "pWNMI38hv0ZaGXl9B_nx4",
-      "username": "OLYS204644",
-      "email": "aakash@gmail.com",
-      "password": "0000000",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "products": [
@@ -31,10 +35,10 @@
       "price": 99.99,
       "fileType": "pdf",
       "fileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yaLf7F2ENyNOdflTGQF0rLovpBifwGsTwg&s",
-      "productDescription": "The PDF explains the difference between UX (user satisfaction) and UI (interface design), stressing user-centered, iterative design. It highlights the importance of usability heuristics, prototyping, and user feedback.\n\n1.UX focuses on user needs, tasks, and satisfaction.\n2.UI deals with layout, visuals, and interaction.\n3.Iterative design and prototyping improve usability.\n4.Nielsen’s 10 heuristics guide effective interface design.",
+      "productDescription": "info...\n1.UX focuses on user needs, tasks, and satisfaction.\n2.UI deals with layout, visuals, and interaction.\n3.Iterative design and prototyping improve usability.\n4.Nielsen’s 10 heuristics guide effective interface design.",
       "visibility": "Public",
       "addAlert": true,
-      "alertMessage": " dzdvzdc",
+      "alertMessage": " hello the vinci resolve",
       "imageUrl": "https://public-files.gumroad.com/5myimco7hzjxlf7eeshzjxtrjkk9"
     },
     {
@@ -46,40 +50,24 @@
       "fileType": "zip",
       "fileUrl": "https://example.com/files/ui-starter-kit.fig",
       "productDescription": "These snikers are too good",
-      "visibility": "Private",
+      "visibility": "Public",
       "addAlert": false,
       "alertMessage": "Only few Products left | buys now big deal | heavy Discount",
       "imageUrl": "https://images.unsplash.com/photo-1607522370275-f14206abe5d3"
-    }
-  ],
-  "carts": [
-    {
-      "id": "1",
-      "productId": "1",
-      "userId": "mhu-me_4DrhMN6Vul0J5J",
-      "quantity": 2,
-      "productName": "Nike Air Max",
-      "productDescription": "Classic running shoes with Air cushioning",
-      "price": 129.99,
-      "size": "US 10",
-      "color": "Black/White",
-      "brand": "Nike",
-      "category": "Footwear",
-      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
     },
     {
-      "id": "2",
-      "productId": "2",
-      "userId": "StsWxlxszDjEGZWRX00Ur",
-      "quantity": 1,
-      "productName": "Adidas Ultraboost",
-      "productDescription": "High-performance running shoes with Boost technology",
-      "price": 179.99,
-      "size": "US 9",
-      "color": "Grey/Red",
-      "brand": "Adidas",
-      "category": "Footwear",
-      "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772"
+      "id": "_DZd8TkH5AGHiTCSN5hZT",
+      "productName": "Nike Air Jordan 1",
+      "owner": "iconverse",
+      "date": "2025-06-14",
+      "price": 45,
+      "fileType": "",
+      "fileUrl": "https://example.com/files/notion-habit-tracker",
+      "productDescription": "",
+      "visibility": "Public",
+      "addAlert": true,
+      "alertMessage": "Just Updated | Make Your Resume Stand Out in 2025!",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yaLf7F2ENyNOdflTGQF0rLovpBifwGsTwg&s"
     }
   ]
 }

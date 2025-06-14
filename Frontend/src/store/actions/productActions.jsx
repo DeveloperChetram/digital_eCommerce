@@ -5,7 +5,7 @@ export const asyncLoadProducts = () => async (dispatch, getState) => {
     try{
         const { data } = await axios.get("/products")
         dispatch(loadproduct(data))
-        console.log("Products loaded successfully:", data);
+        // console.log("Products loaded successfully:", data);
     }
     catch (err) {
         console.error("Error loading products:", err);
@@ -36,7 +36,7 @@ catch (err) {
 export const asyncDeleteProduct = (id) => async (dispatch, getState) => {
   try {
 await axios.delete("/products/"+id)
-dispatch(asyncLoadProducts())
+dispatch(asyncLoadProducts(null))
 }
 
 catch (err) {
