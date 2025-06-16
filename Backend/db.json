@@ -6,16 +6,7 @@
       "email": "patelchetram49@gmail.com",
       "password": "chetna",
       "isAdmin": true,
-      "cart": [
-        {
-          "productId": "BpoS56VmeBHj39ZfSXSbw",
-          "quantity": 2
-        },
-        {
-          "productId": "3ZzhAkiRnDF_eJ5GuRjkh",
-          "quantity": 1
-        }
-      ]
+      "cart": []
     },
     {
       "id": "rTvb5AXdDYS7xWCPsBr4y",
@@ -24,6 +15,23 @@
       "password": "222222",
       "isAdmin": false,
       "cart": []
+    },
+    {
+      "id": "0GHPe_hZwGAQlbZYrGTDZ",
+      "username": "priyanka patel",
+      "email": "priyanka@gmail.com",
+      "password": "123456",
+      "isAdmin": true,
+      "cart": [
+        {
+          "productId": "Lp_NV-GouLgnAZbJv4z1E",
+          "quantity": 3
+        },
+        {
+          "productId": "_DZd8TkH5AGHiTCSN5hZT",
+          "quantity": 3
+        }
+      ]
     }
   ],
   "products": [
@@ -32,13 +40,13 @@
       "productName": "Trishonna's Worthy 30 Bundle",
       "owner": "trishonna",
       "date": "2025-02-15",
-      "price": 99.99,
+      "price": 10,
       "fileType": "pdf",
       "fileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yaLf7F2ENyNOdflTGQF0rLovpBifwGsTwg&s",
       "productDescription": "info...\n1.UX focuses on user needs, tasks, and satisfaction.\n2.UI deals with layout, visuals, and interaction.\n3.Iterative design and prototyping improve usability.\n4.Nielsen’s 10 heuristics guide effective interface design.",
       "visibility": "Public",
       "addAlert": true,
-      "alertMessage": " hello the vinci resolve",
+      "alertMessage": "hello the vinci resolve",
       "imageUrl": "https://public-files.gumroad.com/5myimco7hzjxlf7eeshzjxtrjkk9"
     },
     {
@@ -46,7 +54,7 @@
       "productName": "Nike Air Jordan 1",
       "owner": "Changuuu",
       "date": "2025-06-22",
-      "price": 5005,
+      "price": 10,
       "fileType": "zip",
       "fileUrl": "https://example.com/files/ui-starter-kit.fig",
       "productDescription": "These snikers are too good",
@@ -60,7 +68,7 @@
       "productName": "Nike Air Jordan 1",
       "owner": "iconverse",
       "date": "2025-06-14",
-      "price": 45,
+      "price": 10,
       "fileType": "",
       "fileUrl": "https://example.com/files/notion-habit-tracker",
       "productDescription": "",
@@ -68,6 +76,20 @@
       "addAlert": true,
       "alertMessage": "Just Updated | Make Your Resume Stand Out in 2025!",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yaLf7F2ENyNOdflTGQF0rLovpBifwGsTwg&s"
+    },
+    {
+      "id": "Lp_NV-GouLgnAZbJv4z1E",
+      "productName": "Priyanka Clothes Collection",
+      "owner": "Priyanka",
+      "date": "2025-06-17",
+      "price": 90,
+      "fileType": "pdf",
+      "fileUrl": "https://chatgpt.com/c/684be2a3-3e80-8012-8bef-9d728f96f809",
+      "productDescription": "This is the collection of clothes from priyanka patel amd you guys will amazed buy my this collection. today is sale so you guys will get heavy discount ",
+      "visibility": "Public",
+      "addAlert": true,
+      "alertMessage": "🚀 Special Launch Price! Upgrade Your Visuals Now | Must purchase before 29!",
+      "imageUrl": "https://www.google.com"
     }
   ]
 }

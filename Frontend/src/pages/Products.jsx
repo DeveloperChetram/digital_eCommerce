@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import PrivateProducts from "./admin/PrivateProducts";
 import { asyncUpdateUser } from "../store/actions/userActions";
+import { toast } from "react-toastify";
 
 
 const Products = () => {
@@ -13,12 +14,12 @@ const Products = () => {
   const products = useSelector((state) => state.products.data);
   const isPublic = products.findIndex((e) => { return e.visibility === "Public" })
   const filteredProducts = products.filter((e) => e.visibility === "Public")
-const dispatch = useDispatch() 
+  const dispatch = useDispatch() 
   const addToCartHandler = (id) => {
     const copyUser = { ...user.data, cart: [...user.data.cart]} 
     // deep copy shalow copy
     const x = copyUser.cart.findIndex((c) => c.productId == id)
-
+    toast.success('Product added to cart')
     if (x == -1) {
       copyUser.cart.push({
         productId:id,

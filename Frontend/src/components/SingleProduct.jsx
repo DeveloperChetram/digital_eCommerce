@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom"
 import { asyncDeleteProduct } from "../store/actions/productActions";
 import { asyncUpdateUser } from "../store/actions/userActions";
+import { toast } from "react-toastify";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ const SingleProduct = () => {
     }
 
     dispatch(asyncUpdateUser(copyUser, copyUser.id))
+     toast.success('Product added to cart')
   }
   const DeleteHandler = ()=> {
     dispatch(asyncDeleteProduct(id))
@@ -97,19 +99,19 @@ const SingleProduct = () => {
               </button>
               <button 
               onClick={()=>addToCartHandler(product.id)}
-              className="border border-[#BF40BF] text-[#BF40BF] px-6 py-2 rounded-lg text-sm font-medium">
+              className="cursor-pointer hover:text-white hover:bg-[#bf40bf]  border border-[#BF40BF] text-[#BF40BF] px-6 py-2 rounded-lg text-sm font-medium">
                 Add to Cart
               </button>
               {users && users.isAdmin && (
                 <>
                   <button 
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium"
+                    className="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium"
                     onClick={() => {navigate(`/admin/update-product/${product.id}`)}}
                   >
                     Update
                   </button>
                   <button 
-                    className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg text-sm font-medium"
+                    className="bg-red-500 cursor-pointer hover:bg-red-600 text-white px-6 py-2 rounded-lg text-sm font-medium"
                     onClick={DeleteHandler}
                   >
                     Delete

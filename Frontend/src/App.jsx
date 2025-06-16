@@ -21,7 +21,7 @@ const App = () => {
     <div className='bg-[#F5F5DC] w-full min-h-screen flex items-center flex-col relative'>
       <Nav/>
       <MainRoutes /> 
-     {user?.cart[0]?.productId? <> <div onClick={()=>navigate('/product-cart/')} className="cart rounded-[50%] cursor-pointer  p-4 bg-[#BF40BF] text-white absolute bottom-20 right-20 flex justify-center items-center">
+     {user?.cart[0]?.productId? <> <div onClick={()=>navigate('/product-cart/')} className="cart rounded-[50%] cursor-pointer  p-4 bg-[#BF40BF] text-white fixed bottom-20 right-20 flex justify-center items-center">
         <FaShoppingCart className='text-4xl' />
       </div></>:<></>}
     </div>

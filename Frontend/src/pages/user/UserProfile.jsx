@@ -6,6 +6,7 @@ import { FaCheck } from "react-icons/fa";
 import {useDispatch, useSelector} from "react-redux";
 import {asyncDeleteUser, asyncUpdateUser} from "../../store/actions/userActions.jsx";
 import {useNavigate, useParams} from "react-router-dom";
+import { loaduser } from "../../store/reducers/UserSlice.jsx";
 
 
 const UserProfile = () => {
@@ -39,7 +40,7 @@ if(user){
     const updateHandler = (updateduser) => {
 
       !isEditable ? dispatch(asyncUpdateUser(updateduser,id)) : null
-
+              toast.success("User updated successfully")
   }
   const daleteHandler = ()=>{
     dispatch(asyncDeleteUser(id))
