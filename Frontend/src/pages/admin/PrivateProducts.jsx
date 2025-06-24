@@ -1,9 +1,34 @@
 
-    import {useSelector} from "react-redux"
+    import { useState, useEffect } from "react";
+     import InfiniteScroll from 'react-infinite-scroll-component';
+// import {useSelector} from "react-redux"
+import axios from '../../api/axiosconfig'
 import { useNavigate } from "react-router-dom";
     const PrivateProducts = () => {
+        const [hasMore, sethasMore] = useState(true)
+  const [products, setproducts] = useState([])
+  const fetchProducts = async () =>{
+    try {
+      const {data} = await axios.get(`/products?_start=${products.length}&_limit=8`)
+      setproducts([...products, ...data])
+     if(data.length == 0) {
+      sethasMore(false)
+     }
+     else{
+      sethasMore(true)
+     }
+    } catch (error) {
+      
+    }
+    console.log(hasMore)
+  }
+  useEffect(() => {
+    fetchProducts()
+  
+
+  }, [])
         const navigate = useNavigate()
-        const products = useSelector((state) => state.products.data);
+        // const products = useSelector((state) => state.products.data);
         const privateFilteredProducts= products?.filter((e)=>e.visibility ==="Private")
         const RenderedPrivateProducts= privateFilteredProducts.map((products)=>
         
@@ -40,6 +65,19 @@ import { useNavigate } from "react-router-dom";
         )
         // console.log(privateFilteredProducts)
     return (
+         <InfiniteScroll 
+              dataLength={products.length} 
+              next={fetchProducts}
+                hasMore={hasMore}
+                  loader={<div className="flex items-center justify-center h-screen ">
+              <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>}
+                  endMessage={
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-10  text-center" role="alert">
+                  <strong className="font-bold">No More Privat  Products Available! </strong>
+                </div>
+          }
+              >
     <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
 
     {RenderedPrivateProducts?.length > 0 ? RenderedPrivateProducts : <div className="col-span-full flex justify-center items-center">
@@ -49,6 +87,7 @@ import { useNavigate } from "react-router-dom";
             </div>
           </div> }
     </div>
+    </InfiniteScroll>
     )
     }
 

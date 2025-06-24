@@ -24,6 +24,7 @@ export const asyncLoginUser = (user) => async (dispatch, getState) => {
       `/user?email=${user.email}&password=${user.password}`
     );
     dispatch(loaduser(data[0]));
+    dispatch(asyncCurrentUser())
     console.log("User logged in successfully:", data[0]);
       toast.success("User loged in")
     localStorage.setItem("user", JSON.stringify(data[0]));

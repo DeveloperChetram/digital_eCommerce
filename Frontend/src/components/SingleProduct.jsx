@@ -12,27 +12,31 @@ const SingleProduct = () => {
     const {id}=useParams()
     const product = products.find((e)=>e.id === id)
   // console.log(id)
-    const addToCartHandler = (id) => {
+    const addToCartHandler = (product) => {
     const copyUser = { ...users, cart: [...users.cart]} 
     // deep copy shalow copy
-    const x = copyUser.cart.findIndex((c) => c.productId == id)
-
+    const x = copyUser.cart.findIndex((c) => c.product.id == product.id)
+    const index = users.cart.findIndex((item) => item.product?.id === id);
     if (x == -1) {
+      toast.success('Product added to cart')
       copyUser.cart.push({
-        productId:id,
+        product:product,
         quantity: 1 
       })
+      // console.log("index",index)
     }
     else {
-      copyUser.cart[x]={
-        productId:id,
-        quantity:copyUser.cart[x].quantity +1
+      copyUser.cart[index]={
+        product:product,
+        quantity:copyUser.cart[index].quantity +1
       }
+      toast.success(`Product quantity is updated by ${copyUser.cart[index].quantity}` )
+// console.log("Matched product index:", index);
+
       console.log(copyUser)
     }
 
     dispatch(asyncUpdateUser(copyUser, copyUser.id))
-     toast.success('Product added to cart')
   }
   const DeleteHandler = ()=> {
     dispatch(asyncDeleteProduct(id))
@@ -98,7 +102,8 @@ const SingleProduct = () => {
                 Buy Now
               </button>
               <button 
-              onClick={()=>addToCartHandler(product.id)}
+              onClick={() => addToCartHandler(product)}
+
               className="cursor-pointer hover:text-white hover:bg-[#bf40bf]  border border-[#BF40BF] text-[#BF40BF] px-6 py-2 rounded-lg text-sm font-medium">
                 Add to Cart
               </button>
