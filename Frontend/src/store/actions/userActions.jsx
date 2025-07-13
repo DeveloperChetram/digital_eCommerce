@@ -1,7 +1,7 @@
 import axios from "../../api/axiosconfig";
 import { loaduser } from "../reducers/UserSlice";
 import {toast} from "react-toastify";
-import {asyncLoadProducts} from "./productActions.jsx";
+// import {asyncLoadProducts} from "./productActions.jsx";
 export const asyncCurrentUser = (user) => async (dispatch, getState) => {
   try {
 
