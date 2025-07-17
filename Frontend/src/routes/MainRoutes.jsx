@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 
 const Home = lazy(()=>import("../pages/Home"))
-const About = lazy(()=>import("../pages/About"))
+const About = lazy(()=>import("../pages/AboutUs"))
 const Login = lazy(()=>import("../pages/Login"))
 const AuthRoute = lazy(()=>import("./AuthRoute"))
 const UserProfile = lazy(()=>import("./../pages/user/UserProfile"))

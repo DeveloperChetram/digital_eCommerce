@@ -38,7 +38,7 @@ const CreateProduct = () => {
         src="/assets/fox-border.png"
         alt=""
       />
-      <h1 className="text-xl font-medium text-center">Create Your Profile</h1>
+      <h1 className="text-xl font-medium text-center">Create Product</h1>
     <form 
   onSubmit={handleSubmit(SubmitHandler)} 
   className="bg-white rounded-xl p-6 w-full space-y-6"
